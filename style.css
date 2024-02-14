@@ -6,7 +6,7 @@
   overflow-x: hidden;
 }
 :root {
-  --primary-color: teal;
+  --primary-color: #ab9ff228;
   --light-color: #8f3aff;
   --dark-color: #0d1f23;
   --white-color: #f5f2ff;
@@ -18,6 +18,9 @@
   height: 100vh;
   background-color: var(--white-color);
 }
+.logo img {
+  width: 200px;
+}
 nav {
   height: 65px;
   width: 100%;
@@ -26,7 +29,7 @@ nav {
   justify-content: space-around;
   background-color: var(--white-color);
   position: fixed;
-  z-index: 3;
+  z-index: 50;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 nav h2 {
@@ -39,6 +42,7 @@ nav ul {
   justify-content: space-around;
   gap: 30px;
   list-style: none;
+  height: 40px;
 }
 nav ul a {
   text-decoration: none;
@@ -49,7 +53,7 @@ nav ul a:hover {
   color: var(--light-color);
   cursor: pointer;
 }
-nav ul a.active {
+nav a.active {
   color: var(--light-color);
 }
 button {
@@ -160,7 +164,7 @@ nav button {
 .box6 {
   width: 350px;
   height: 200px;
-  background-color: #fff;
+  background-color: #ffffffd3;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   padding: 10px;
@@ -206,4 +210,159 @@ nav button {
   width: 100%;
   height: 90vh;
   background-color: var(--white-color);
+  display: grid;
+  place-items: center;
+}
+#about h1 {
+  text-align: center;
+  font-size: 30px;
+}
+#about .aboutBox {
+  width: 80%;
+  height: 70vh;
+  background-color: #ffffffd3;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  position: relative;
+  z-index: 10;
+}
+#about .content {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  text-align: justify;
+  word-spacing: 2px;
+  line-height: 25px;
+  font-style: italic;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.content .whyus {
+  text-align: justify;
+}
+.content .whyus strong {
+  font-size: 25px;
+}
+#about .circle1,
+.circle2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 9;
+}
+#about .circle1 {
+  right: 70px;
+  margin-top: 490px;
+  background-color: #ab9ff2d8;
+}
+#about .circle2 {
+  left: 70px;
+  margin-bottom: 350px;
+
+  background-color: var(--primary-color);
+}
+/* ------------------------------Pricing page starts----------------------------------- */
+#pricing {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--white-color);
+}
+#pricing h1 {
+  text-align: center;
+  font-size: 30px;
+}
+#pricing .content {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#pricing .content strong {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+#pricing .content p {
+  width: 80%;
+}
+/* --------------------------------------Contact page starts-------------------------------------------- */
+#contact {
+  width: 100%;
+  height: 85vh;
+  background-color: var(--primary-color);
+}
+#contact h1 {
+  text-align: center;
+  font-size: 30px;
+}
+#contact .container {
+  width: 100%;
+  height: 80%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+#contact .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form input,
+textarea {
+  padding: 20px 20px;
+  outline: none;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  background: none;
+  background-color: var(--white-color);
+  font-size: 15px;
+}
+form .msg {
+  height: 150px;
+}
+#contact button {
+  margin-top: 10px;
+  background-color: teal;
+}
+#contact .address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#contact .addressBox {
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+}
+.addressBox label {
+  margin-top: 30px;
+}
+.address .iconBox {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+#contact img {
+  width: 50px;
+}
+#contact img:nth-child(1) {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+#contact img:nth-child(2) {
+  margin-bottom: 20px;
+  padding-top: 5px;
+}
+#contact img:nth-child(3) {
+  margin-top: 10px;
+}
+.addressBox a {
+  text-decoration: none;
 }

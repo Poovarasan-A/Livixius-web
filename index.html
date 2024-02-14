@@ -4,25 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="website icon" type="png" href="./assets/livixius logo square.png">
     <title>Livixius</title>
   </head>
   <body>
     <section id="home">
       <!-- Navbar starts here -->
-      <nav>
-        <h2 class="logo">Livixius</h2>
+      <nav id="navbar">
+        <div class="logo"><img src="./assets/livixius logo copy.png" alt=""></div>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#features" class="active">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <button>Request Demo</button>
       </nav>
       <div class="homePage">
         <div class="wlcm">
-          <h1>Hey ! I am<span> LIVIXIUS</span></h1>
+          <h1>Hey! I am<span> LIVIXIUS</span></h1>
           <h2>
             Your Hotel Management Companion<br />Sounds great right? Let's try Livixius
           </h2>
@@ -97,6 +98,66 @@
       </div>
     </section>
     <!-- --------------------------------Features page ends here------------------------------------ -->
-    <section id="about"></section>
+    <section id="about">
+      <h1>About</h1>
+      <div class="circle1"></div>
+      <div class="aboutBox">   
+        <div class="content">
+          <div class="aboutus">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore dignissimos fuga hic eveniet repellendus, rem odit debitis earum? Itaque quibusdam rem fuga quis assumenda earum. Voluptates, possimus. Aliquam quae error, numquam repellat quia placeat vitae. Molestias in ut vitae aliquam deleniti culpa, voluptate laborum, animi neque repellendus rem. Amet.</p>
+          </div>
+          <div class="whyus">
+            <strong>Why Us?</strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur commodi rerum tempora officiis animi hic quia atque exercitationem quidem eligendi, non sint officia adipisci nesciunt, molestiae laudantium reprehenderit, neque iure? Quae iure nobis totam animi enim perferendis minima, inventore laborum hic quis sit at doloremque natus, ad cum praesentium tempora?</p>
+          </div>
+        </div>
+      </div>
+      <div class="circle2"></div>
+    </section>
+    <!-- ---------------------------------------About page ends here---------------------------------------- -->
+    <section id="pricing">
+      <h1>Pricing</h1>
+      <div class="content">
+      <strong>For Enquiry <a href="#"> Contact us.</a></strong>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, adipisci! Dolorum, voluptatem laudantium! Doloribus nisi laborum cumque quam eum nam, similique eius ipsam quos, quidem harum deserunt sint et provident deleniti possimus enim voluptates magnam ducimus inventore laudantium, ab sit. Voluptates, architecto. Harum itaque, corporis consequatur cupiditate esse inventore dolores tempore autem illo similique! Odio temporibus dolorum facere perspiciatis sed nemo, doloremque dignissimos nihil sapiente? Veniam nulla quos aspernatur, cumque quam eveniet provident enim suscipit aliquam tempore quidem possimus voluptas illo, error dicta veritatis vitae nostrum temporibus ex rerum eligendi nemo esse. Eum aliquid totam dolorum, possimus quaerat ratione veritatis.</p>
+      </div>
+    </section>
+    <!-- ----------------------------------------Pricing page ends here----------------------------------- -->
+    <section id="contact">
+      <h1>Get in touch with us</h1>
+      <div class="container">
+      <div class="form">
+        <form>
+          <div class="form1">
+          <input type="text" placeholder="Your Name">
+          <input type="number" placeholder="Your Mobile" >
+        </div>
+          <input type="email" placeholder="Your Mail Id">
+          <textarea type="text" placeholder="Message" class="msg"></textarea>
+        </form>
+        <button>Send Message</button>
+      </div>
+      <div class="address">
+        <div class="iconBox">
+          <img src="./assets/telephone.png" alt="">
+          <img src="./assets/email.png" alt="">
+          <img src="./assets/placeholder.png" alt="">
+        </div>
+        <div class="addressBox ">
+        <label>Call Us</label>
+        <a href="tel:"><strong>+91 9944135493, +91 8220997988</strong></a>
+        <label>Mail Us</label>
+        <a href="mailto:livixiusinn@gmail.com"><strong>livixiusinn@gmail.com</strong></a>
+        <label>Our Office</label>
+        <strong>No.9 Anujj Enclave, Post Office Road, <br> Koratur, Chennai - 600076</strong>
+      </div>
+      </div>
+      </div>
+    </section>
+
+
+
+
+    <script src="app.js"></script>
   </body>
 </html>
