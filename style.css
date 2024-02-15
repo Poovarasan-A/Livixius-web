@@ -106,12 +106,12 @@ nav button {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 .wlcmImg img {
   width: 500px;
   transition: 0.5s;
-  position: relative;
-  z-index: 2;
 }
 .wlcmImg img:hover {
   transform: scale(1.1);
@@ -122,7 +122,7 @@ nav button {
   height: 100%;
   background: linear-gradient(#ab9ff2, #ab9ff228);
   position: absolute;
-  right: 0;
+  right: -100px;
   bottom: 0;
   z-index: 1;
   border-top-left-radius: 100%;
@@ -143,7 +143,7 @@ nav button {
   height: 100%;
   background-color: #ab9ff228;
   position: absolute;
-  right: 0;
+  right: -100px;
   bottom: 0;
   z-index: 1;
   border-bottom-left-radius: 100%;
@@ -365,4 +365,17 @@ form .msg {
 }
 .addressBox a {
   text-decoration: none;
+}
+/* ------------------------------Mobile and  other devices------------------------------------ */
+@media only screen and (max-width: 600px) {
+  .homePage {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .wlcm {
+    left: 0;
+    align-items: center;
+  }
 }
