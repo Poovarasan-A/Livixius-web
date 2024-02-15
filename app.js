@@ -19,12 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
+// ------------------------------ background circle animation------------------------
 gsap.to(".bgAnim1,.bgAnim2", {
   x: -100,
   duration: 2,
 });
 
+// ------------------------------ welcome page image animation------------------------
 gsap.set(".wlcmImg", {
   opacity: 0,
 });
@@ -35,18 +36,24 @@ gsap.to(".wlcmImg", {
   x: 20,
 });
 
-gsap.set(".box", {
-  opacity: 0,
-});
-
-gsap.to(".box", {
-  opacity: 1,
-  duration: 1,
-  yoyo: true,
-  ease: "power1",
-  stagger: {
-    amount: 2,
-    each: 0.5,
-    from: 0,
+// ------------------------------ features box animation------------------------
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".box",
+    start: "-40% center",
+    end: "30% center",
+    scrub: true,
+    markers: false,
   },
 });
+tl.set(".box", {
+  opacity: 0,
+  duration: 3,
+});
+tl.to(".box", {
+  opacity: 1,
+  duration: 3,
+  y: -50,
+});
+
+// ------------------------------ about page circle animation------------------------
