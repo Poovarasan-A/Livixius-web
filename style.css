@@ -424,7 +424,7 @@ form .msg {
     display: none;
   }
   .homePage {
-    padding-top: 100px;
+    padding-top: 150px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -499,7 +499,7 @@ form .msg {
   }
   #about .circle1 {
     right: 0;
-    margin-top: 700px;
+    margin-top: 500px;
   }
   #about p {
     font-size: 15px;
