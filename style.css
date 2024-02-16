@@ -128,14 +128,14 @@ nav button {
   cursor: pointer;
 }
 .bgAnim1 {
-  width: 50%;
-  height: 100%;
+  width: 700px;
+  height: 1300px;
   background: linear-gradient(#ab9ff2, #ab9ff228);
-  position: absolute;
-  right: -100px;
-  bottom: 0;
   z-index: 1;
-  border-top-left-radius: 100%;
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  border-radius: 900px 0 0 900px;
 }
 /* ---------------------Features------------------ */
 #features {
@@ -146,16 +146,7 @@ nav button {
 #features h1 {
   text-align: center;
   font-size: 30px;
-}
-.bgAnim2 {
-  width: 50%;
-  height: 100%;
-  background-color: #ab9ff228;
-  position: absolute;
-  right: -100px;
-  bottom: 0;
-  z-index: 1;
-  border-bottom-left-radius: 100%;
+  z-index: 4;
 }
 .boxes {
   width: 100%;
@@ -354,6 +345,7 @@ form .msg {
   display: flex;
   flex-direction: column;
   padding-right: 30px;
+  margin-top: 20px;
 }
 #contact img {
   width: 50px;
@@ -369,6 +361,11 @@ form .msg {
 #contact img:nth-child(3) {
   margin-top: 10px;
 }
+#contact .logo2 {
+  width: 400px;
+  position: absolute;
+  top: -20px;
+}
 .addressBox a {
   text-decoration: none;
 }
@@ -376,7 +373,7 @@ form .msg {
   text-align: center;
 }
 /* ------------------------------Mobile and  other devices------------------------------------ */
-@media all and (max-width: 740px) {
+@media all and (max-width: 768px) {
   nav {
     flex-direction: column;
   }
@@ -407,7 +404,7 @@ form .msg {
   }
   .homePage {
     padding-top: 100px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
   }
@@ -430,21 +427,26 @@ form .msg {
     padding-right: 30px;
   }
   .bgAnim1 {
-    background-color: #ab9ff228;
+    height: 500px;
+    width: 250px;
+    background: linear-gradient(#ab9ff2, #ab9ff228);
+    border-radius: 700px 0 0 700px;
+    top: 45%;
+    right: -40%;
     z-index: 1;
   }
-  .bgAnim2 {
-    background: linear-gradient(#ab9ff228, #ab9ff2);
-  }
-
   /* ---------------------------features page--------------------- */
+  #features h1 {
+    position: relative;
+    z-index: 4;
+  }
   .boxes {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
   .boxes .box {
     width: 280px;
     height: 160px;
-    margin-top: 20px;
   }
   .boxes .icon-circle {
     width: 50px;
@@ -481,7 +483,7 @@ form .msg {
   }
   #about .circle1 {
     right: 0;
-    margin-top: 800px;
+    margin-top: 700px;
   }
   #about p {
     font-size: 15px;
@@ -536,5 +538,11 @@ form .msg {
   #contact img {
     width: 40px;
     margin: 0 20px 0 10px;
+  }
+  #contact img:nth-child(1) {
+    margin-bottom: 30px;
+  }
+  #contact .logo2 {
+    display: none;
   }
 }
