@@ -7,8 +7,8 @@
 }
 :root {
   --primary-color: #ab9ff228;
+  --extralight-color: #ab9ff2d8;
   --light-color: #8f3aff;
-  --dark-color: #0d1f23;
   --white-color: #f5f2ff;
   --secondary-color: #ab9ff2;
   --text-color: #3c315b;
@@ -62,7 +62,7 @@ nav a.active {
   width: 25px;
   height: 4px;
   border-radius: 5px;
-  background-color: #8f3aff;
+  background-color: var(--light-color);
   margin-top: 2px;
 }
 .menu {
@@ -134,7 +134,7 @@ nav button {
 .bgAnim1 {
   width: 700px;
   height: 1400px;
-  background: linear-gradient(#ab9ff2, #ab9ff228);
+  background: linear-gradient(var(--secondary-color), var(--primary-color));
   z-index: 1;
   position: absolute;
   top: -20%;
@@ -179,7 +179,7 @@ nav button {
 .box4:hover,
 .box5:hover,
 .box6:hover {
-  background-color: #ab9ff2;
+  background-color: var(--secondary-color);
   cursor: pointer;
   color: #fff;
 }
@@ -277,7 +277,7 @@ nav button {
 #about .circle2 {
   left: 70px;
   margin-bottom: 250px;
-  background-color: #ab9ff2d8;
+  background-color: var(--extralight-color);
 }
 /* ------------------------------Pricing page starts----------------------------------- */
 #pricing {
@@ -397,7 +397,8 @@ form .msg {
 @media all and (max-width: 768px) {
   nav {
     flex-direction: column;
-    height: 60px;
+    width: 100%;
+    overflow-x: hidden;
   }
   nav ul {
     flex-direction: column;
@@ -457,7 +458,7 @@ form .msg {
   .bgAnim1 {
     width: 200px;
     height: 400px;
-    background: linear-gradient(#ab9ff2, #ab9ff228);
+    background: linear-gradient(var(--secondary-color), var(--primary-color));
     z-index: 1;
     top: 55%;
     right: 0;
