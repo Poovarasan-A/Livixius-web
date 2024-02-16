@@ -22,7 +22,6 @@
   width: 200px;
 }
 nav {
-  height: 65px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -42,7 +41,6 @@ nav ul {
   justify-content: space-around;
   gap: 30px;
   list-style: none;
-  height: 40px;
 }
 nav ul a {
   text-decoration: none;
@@ -55,6 +53,17 @@ nav ul a:hover {
 }
 nav a.active {
   color: var(--light-color);
+}
+.menu-line {
+  width: 25px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #8f3aff;
+  margin-top: 2px;
+}
+.menu {
+  cursor: pointer;
+  display: none;
 }
 button {
   color: var(--white-color);
@@ -75,13 +84,14 @@ nav button {
   grid-template-columns: 1fr 1fr;
 }
 .wlcm {
+  width: 100%;
   color: var(--text-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   position: relative;
-  left: 200px;
+  padding-left: 200px;
 }
 .wlcm h1 {
   font-size: 2.8rem;
@@ -118,7 +128,7 @@ nav button {
   cursor: pointer;
 }
 .bgAnim1 {
-  width: 760px;
+  width: 50%;
   height: 100%;
   background: linear-gradient(#ab9ff2, #ab9ff228);
   position: absolute;
@@ -130,7 +140,6 @@ nav button {
 /* ---------------------Features------------------ */
 #features {
   width: 100%;
-  height: 90vh;
   background-color: var(--white-color);
   position: relative;
 }
@@ -139,7 +148,7 @@ nav button {
   font-size: 30px;
 }
 .bgAnim2 {
-  width: 760px;
+  width: 50%;
   height: 100%;
   background-color: #ab9ff228;
   position: absolute;
@@ -149,20 +158,16 @@ nav button {
   border-bottom-left-radius: 100%;
 }
 .boxes {
-  height: 90%;
+  width: 100%;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
   position: relative;
   z-index: 2;
-  padding-top: 50px;
+  margin: 40px 0 80px 0;
 }
-.boxes .box1,
-.box2,
-.box3,
-.box4,
-.box5,
-.box6 {
+.boxes .box {
   width: 350px;
   height: 200px;
   background-color: #ffffffd3;
@@ -192,7 +197,8 @@ nav button {
 }
 .boxes .f-foot {
   padding: 0px 12px;
-  text-align: justify;
+  /* text-align: justify; */
+  word-spacing: 0;
 }
 .boxes .icon-circle {
   width: 70px;
@@ -210,7 +216,6 @@ nav button {
 /* ----------------------About page starts------------------------ */
 #about {
   width: 100%;
-  height: 90vh;
   background-color: var(--white-color);
   display: grid;
   place-items: center;
@@ -227,6 +232,7 @@ nav button {
   border-radius: 30px;
   position: relative;
   z-index: 10;
+  margin: 40px 0 80px 0;
 }
 #about .content {
   height: 100%;
@@ -258,18 +264,16 @@ nav button {
 #about .circle1 {
   right: 70px;
   margin-top: 490px;
-  background-color: #ab9ff2d8;
+  background-color: var(--primary-color);
 }
 #about .circle2 {
   left: 70px;
-  margin-bottom: 350px;
-
-  background-color: var(--primary-color);
+  margin-bottom: 450px;
+  background-color: #ab9ff2d8;
 }
 /* ------------------------------Pricing page starts----------------------------------- */
 #pricing {
   width: 100%;
-  height: 50vh;
   background-color: var(--white-color);
 }
 #pricing h1 {
@@ -283,6 +287,7 @@ nav button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 40px 0 80px 0;
 }
 #pricing .content strong {
   font-size: 25px;
@@ -294,7 +299,6 @@ nav button {
 /* --------------------------------------Contact page starts-------------------------------------------- */
 #contact {
   width: 100%;
-  height: 85vh;
   background-color: var(--primary-color);
 }
 #contact h1 {
@@ -304,7 +308,7 @@ nav button {
 #contact .container {
   width: 100%;
   height: 80%;
-  margin-top: 50px;
+  margin: 50px 0 40px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
@@ -349,7 +353,7 @@ form .msg {
 .address .iconBox {
   display: flex;
   flex-direction: column;
-  margin-right: 30px;
+  padding-right: 30px;
 }
 #contact img {
   width: 50px;
@@ -368,16 +372,169 @@ form .msg {
 .addressBox a {
   text-decoration: none;
 }
+.copyrights {
+  text-align: center;
+}
 /* ------------------------------Mobile and  other devices------------------------------------ */
-@media only screen and (max-width: 600px) {
+@media all and (max-width: 740px) {
+  nav {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+    display: none;
+  }
+  nav ul li {
+    margin: 15px 0 0 0;
+  }
+  .logo img {
+    width: 150px;
+    padding-top: 10px;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+  .showmenu {
+    display: block;
+  }
+  nav button {
+    display: none;
+  }
   .homePage {
-    height: 100vh;
+    padding-top: 100px;
     width: 100%;
-    display: grid;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: column;
   }
   .wlcm {
-    left: 0;
     align-items: center;
+    text-align: center;
+    padding: 0px 10px;
+    z-index: 2;
+  }
+  .wlcm h1 {
+    font-size: 1.5rem;
+  }
+  .wlcm h1 span {
+    font-size: 1.8rem;
+  }
+  .wlcm h2 {
+    font-size: 1rem;
+  }
+  .wlcmImg img {
+    padding-right: 30px;
+  }
+  .bgAnim1 {
+    background-color: #ab9ff228;
+    z-index: 1;
+  }
+  .bgAnim2 {
+    background: linear-gradient(#ab9ff228, #ab9ff2);
+  }
+
+  /* ---------------------------features page--------------------- */
+  .boxes {
+    grid-template-columns: 1fr;
+  }
+  .boxes .box {
+    width: 280px;
+    height: 160px;
+    margin-top: 20px;
+  }
+  .boxes .icon-circle {
+    width: 50px;
+    height: 50px;
+    margin: 5px 10px 5px 5px;
+  }
+  .boxes img {
+    width: 25px;
+  }
+  .boxes strong {
+    font-size: 15px;
+  }
+  .boxes .box p {
+    font-size: 14px;
+  }
+  /* ---------------------------------about page---------------------- */
+
+  #about .aboutBox {
+    width: 90%;
+    height: auto;
+  }
+  #about .content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  #about .circle {
+    width: 80px;
+    height: 80px;
+  }
+  #about .circle2 {
+    left: 0;
+    margin-bottom: 600px;
+  }
+  #about .circle1 {
+    right: 0;
+    margin-top: 800px;
+  }
+  #about p {
+    font-size: 15px;
+  }
+  /* ---------------------- pricing page-------------------------- */
+  #pricing {
+    height: auto;
+  }
+  #pricing .content {
+    height: auto;
+  }
+  /* -------------------------contact page------------------------- */
+  #contact {
+    height: auto;
+  }
+  #contact .container {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+  #contact .form {
+    width: 100%;
+  }
+  #contact .form form {
+    margin: 0 20px 0 20px;
+    gap: 10px;
+  }
+  .form .form1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .form .form1 input {
+    margin-top: 10px;
+  }
+  form input,
+  textarea {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+  form .msg {
+    height: 100px;
+  }
+  #contact button {
+    align-self: center;
+    margin-top: 5px;
+  }
+  #contact .address {
+    margin-bottom: 20px;
+  }
+  .address strong {
+    font-size: 15px;
+  }
+  #contact img {
+    width: 40px;
+    margin: 0 20px 0 10px;
   }
 }
