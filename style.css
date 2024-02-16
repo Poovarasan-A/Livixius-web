@@ -18,6 +18,10 @@
   height: 100vh;
   background-color: var(--white-color);
 }
+#home button a {
+  text-decoration: none;
+  color: #fff;
+}
 .logo img {
   width: 200px;
 }
@@ -506,8 +510,11 @@ form .msg {
     width: 100%;
   }
   #pricing .content {
-    width: 70%;
+    width: 90%;
     height: auto;
+  }
+  #pricing .content strong {
+    font-size: 20px;
   }
   /* -------------------------contact page------------------------- */
   #contact {
