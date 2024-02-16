@@ -397,6 +397,7 @@ form .msg {
 @media all and (max-width: 768px) {
   nav {
     flex-direction: column;
+    height: 60px;
   }
   nav ul {
     flex-direction: column;
@@ -405,7 +406,8 @@ form .msg {
     display: none;
   }
   nav ul li {
-    margin: 15px 0 0 0;
+    margin: 20px 0 0 0;
+    transition: 0.5s;
   }
   .logo img {
     width: 150px;
@@ -419,15 +421,17 @@ form .msg {
   }
   .showmenu {
     display: block;
+    transition: 1s;
   }
   nav button {
     display: none;
   }
   .homePage {
-    padding-top: 150px;
+    padding-top: 130px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
   }
   .wlcm {
     align-items: center;
@@ -447,8 +451,17 @@ form .msg {
   .wlcmImg img {
     padding-right: 30px;
   }
-  .bgAnim1 {
+  /* .bgAnim1 {
     display: none;
+  } */
+  .bgAnim1 {
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(#ab9ff2, #ab9ff228);
+    z-index: 1;
+    top: 55%;
+    right: 0;
+    border-radius: 900px 0 0 900px;
   }
 
   /* ---------------------------features page--------------------- */

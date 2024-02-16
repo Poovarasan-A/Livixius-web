@@ -23,11 +23,25 @@
           <img src="./assets/livixius logo copy.png" alt="" />
         </div>
         <ul>
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#features" class="nav-link">Features</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#pricing" class="nav-link">Pricing</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <a href="#home" onclick="hideMenu()" class="nav-link active"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#features" onclick="hideMenu()" class="nav-link"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a href="#about" onclick="hideMenu()" class="nav-link">About</a>
+          </li>
+          <li>
+            <a href="#pricing" onclick="hideMenu()" class="nav-link">Pricing</a>
+          </li>
+          <li>
+            <a href="#contact" onclick="hideMenu()" class="nav-link">Contact</a>
+          </li>
         </ul>
         <div class="menu">
           <div class="menu-line"></div>
@@ -50,7 +64,7 @@
         <div class="wlcmImg">
           <img src="./assets/Desktop-home.png" alt="Desktop Image" />
         </div>
-        <div class="bgAnim1"></div>
+        <div class="bgAnim1" data-aos="fade-left"></div>
       </div>
     </section>
     <!-- ---------------------------Homepage ends here------------------------------------- -->
@@ -189,7 +203,7 @@
       <h1>Pricing</h1>
       <div class="content">
         <strong
-          >we assure quality at affordability, Schedule a free demo today and
+          >We assure quality at affordability, schedule a free demo today and
           see how LIVIXIUS can transform your hotel operations. To know pricing,
           get in <a href="#contact">Touch with us now.</a></strong
         >
@@ -202,13 +216,14 @@
         <div class="form">
           <form>
             <div class="form1" data-aos="fade-right">
-              <input type="text" placeholder="Your Name" />
-              <input type="number" placeholder="Your Mobile" />
+              <input type="text" placeholder="Your Name" required />
+              <input type="number" placeholder="Your Mobile" required />
             </div>
             <input
               type="email"
               placeholder="Your Mail Id"
               data-aos="fade-right"
+              required
             />
             <textarea
               type="text"

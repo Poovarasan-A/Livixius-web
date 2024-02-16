@@ -1,3 +1,4 @@
+// ------------------------------- active page highlight on navbar ----------------------
 document.addEventListener("DOMContentLoaded", () => {
   var navLinks = document.querySelectorAll(".nav-link");
   var sections = document.querySelectorAll("section");
@@ -28,11 +29,9 @@ menu.addEventListener("click", () => {
   menuList.classList.toggle("showmenu");
 });
 
-// ------------------------------ background circle animation------------------------
-gsap.to(".bgAnim1,.bgAnim2", {
-  x: -100,
-  duration: 2,
-});
+function hideMenu() {
+  menuList.classList.remove("showmenu");
+}
 
 // ------------------------------ welcome page image animation------------------------
 gsap.set(".wlcmImg", {
@@ -46,25 +45,6 @@ gsap.to(".wlcmImg", {
 });
 
 // ------------------------------ features box animation------------------------
-// let tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".box",
-//     start: "-40% center",
-//     end: "30% center",
-//     scrub: true,
-//     markers: false,
-//   },
-// });
-// tl.set(".box", {
-//   opacity: 0,
-//   duration: 3,
-// });
-// tl.to(".box", {
-//   opacity: 1,
-//   duration: 3,
-//   y: -50,
-// });
-
 AOS.init({
   delay: 300,
   duration: 1200,
