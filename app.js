@@ -83,7 +83,7 @@ let tl2 = gsap
     },
   })
   .to(".circle1", {
-    y: -450,
+    y: -250,
     duration: 3,
     backgroundColor: "#ab9ff2d8",
     yoyo: true,
@@ -100,7 +100,7 @@ let tl3 = gsap
     },
   })
   .to(".circle2", {
-    y: 450,
+    y: 300,
     duration: 3,
     backgroundColor: "#ab9ff228",
     yoyo: true,

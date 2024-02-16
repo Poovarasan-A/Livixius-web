@@ -129,7 +129,7 @@ nav button {
 }
 .bgAnim1 {
   width: 700px;
-  height: 1300px;
+  height: 1400px;
   background: linear-gradient(#ab9ff2, #ab9ff228);
   z-index: 1;
   position: absolute;
@@ -217,7 +217,6 @@ nav button {
 }
 #about .aboutBox {
   width: 80%;
-  height: 70vh;
   background-color: #ffffffd3;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
@@ -226,7 +225,6 @@ nav button {
   margin: 40px 0 80px 0;
 }
 #about .content {
-  height: 100%;
   width: 100%;
   padding: 40px;
   text-align: justify;
@@ -238,11 +236,26 @@ nav button {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.content .whyus {
-  text-align: justify;
+.content .aboutHead {
+  height: 40px;
+  text-align: center;
+}
+.aboutHead strong {
+  font-size: 25px;
+}
+.content .aboutus {
+  padding-right: 15px;
+}
+.content .whyusHead {
+  height: 40px;
+  text-align: center;
 }
 .content .whyus strong {
   font-size: 25px;
+}
+.content .whyus {
+  padding-left: 15px;
+  text-align: center;
 }
 #about .circle1,
 .circle2 {
@@ -254,27 +267,32 @@ nav button {
 }
 #about .circle1 {
   right: 70px;
-  margin-top: 490px;
+  margin-top: 200px;
   background-color: var(--primary-color);
 }
 #about .circle2 {
   left: 70px;
-  margin-bottom: 450px;
+  margin-bottom: 250px;
   background-color: #ab9ff2d8;
 }
 /* ------------------------------Pricing page starts----------------------------------- */
 #pricing {
   width: 100%;
   background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #pricing h1 {
   text-align: center;
   font-size: 30px;
 }
 #pricing .content {
-  width: 100%;
+  width: 80%;
   height: 50%;
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -283,9 +301,6 @@ nav button {
 #pricing .content strong {
   font-size: 25px;
   margin-bottom: 10px;
-}
-#pricing .content p {
-  width: 80%;
 }
 /* --------------------------------------Contact page starts-------------------------------------------- */
 #contact {
@@ -376,6 +391,10 @@ form .msg {
 }
 /* ------------------------------Mobile and  other devices------------------------------------ */
 @media all and (max-width: 768px) {
+  body {
+    max-width: 100%;
+    height: 100vh;
+  }
   nav {
     flex-direction: column;
   }
@@ -396,7 +415,7 @@ form .msg {
     display: block;
     position: absolute;
     top: 20px;
-    right: 15px;
+    right: 10px;
   }
   .showmenu {
     display: block;
@@ -406,9 +425,10 @@ form .msg {
   }
   .homePage {
     padding-top: 100px;
-    width: 100vw;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
   }
   .wlcm {
     align-items: center;
@@ -429,13 +449,7 @@ form .msg {
     padding-right: 30px;
   }
   .bgAnim1 {
-    height: 500px;
-    width: 250px;
-    background: linear-gradient(#ab9ff2, #ab9ff228);
-    border-radius: 700px 0 0 700px;
-    top: 45%;
-    right: -40%;
-    z-index: 1;
+    display: none;
   }
   /* ---------------------------features page--------------------- */
   #features h1 {
@@ -447,7 +461,7 @@ form .msg {
     gap: 30px;
   }
   .boxes .box {
-    width: 280px;
+    width: 90%;
     height: 160px;
   }
   .boxes .icon-circle {
@@ -493,8 +507,10 @@ form .msg {
   /* ---------------------- pricing page-------------------------- */
   #pricing {
     height: auto;
+    width: 100%;
   }
   #pricing .content {
+    width: 70%;
     height: auto;
   }
   /* -------------------------contact page------------------------- */
