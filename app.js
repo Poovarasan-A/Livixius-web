@@ -34,6 +34,11 @@ function sendToWhatsapp() {
   let email = encodeURIComponent(document.getElementById("email").value);
   let message = encodeURIComponent(document.getElementById("message").value);
 
+  if (name === "" || mobile === "" || email === "") {
+    alert("Please fill out all required fields before submission");
+    return;
+  }
+
   var url =
     "https://wa.me/" +
     number +
