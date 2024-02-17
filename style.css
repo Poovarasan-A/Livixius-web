@@ -353,6 +353,9 @@ form .msg {
   margin-top: 10px;
   background-color: teal;
 }
+#contact .mailbtn {
+  background-color: #004ff9;
+}
 #contact .address {
   display: flex;
   justify-content: center;

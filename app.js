@@ -85,3 +85,62 @@ let tl3 = gsap
     backgroundColor: "var(--primary-color)",
     yoyo: true,
   });
+//------------------------------------ send to whatsapp ----------------------------------
+
+// function sendToWhatsapp() {
+//   let number = "+918220997988";
+
+//   let name = document.getElementById("name").value;
+//   let mobile = document.getElementById("mobile").value;
+//   let email = document.getElementById("email").value;
+//   let message = document.getElementById("message").value;
+
+//   var url =
+//     "https://wa.me/" +
+//     number +
+//     "?text =" +
+//     "Name: " +
+//     name +
+//     "%0a" +
+//     "Mobile: " +
+//     mobile +
+//     "%0a" +
+//     "Email: " +
+//     email +
+//     "%0a" +
+//     "Message: " +
+//     message +
+//     "%0a%0a";
+
+//   window.open(url, "_blank").focus();
+// }
+
+//-------------------
+
+function sendToWhatsapp() {
+  let number = "+918220997988";
+
+  let name = encodeURIComponent(document.getElementById("name").value);
+  let mobile = encodeURIComponent(document.getElementById("mobile").value);
+  let email = encodeURIComponent(document.getElementById("email").value);
+  let message = encodeURIComponent(document.getElementById("message").value);
+
+  var url =
+    "https://wa.me/" +
+    number +
+    "?text=" +
+    "Name: " +
+    name +
+    "%0a" +
+    "Mobile: " +
+    mobile +
+    "%0a" +
+    "Email: " +
+    email +
+    "%0a" +
+    "Message: " +
+    message +
+    "%0a%0a";
+
+  window.open(url, "_blank").focus();
+}

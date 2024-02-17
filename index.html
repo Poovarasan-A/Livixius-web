@@ -216,22 +216,32 @@
         <div class="form">
           <form>
             <div class="form1" data-aos="fade-right">
-              <input type="text" placeholder="Your Name" required />
-              <input type="number" placeholder="Your Mobile" required />
+              <input type="text" placeholder="Your Name" required id="name" />
+              <input
+                type="number"
+                placeholder="Your Mobile"
+                required
+                id="mobile"
+              />
             </div>
             <input
               type="email"
               placeholder="Your Mail Id"
               data-aos="fade-right"
               required
+              id="email"
             />
             <textarea
               type="text"
               placeholder="Message"
               class="msg"
               data-aos="fade-right"
+              id="message"
             ></textarea>
-            <button>Send Message</button>
+            <div class="contactBtn">
+              <button onclick="" class="mailbtn">Send Message</button>
+              <button onclick="sendToWhatsapp()">Send Whatsapp</button>
+            </div>
           </form>
         </div>
         <div class="address" data-aos="fade-left">
