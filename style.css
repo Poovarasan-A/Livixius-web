@@ -14,9 +14,9 @@
   --secondary-color: #ab9ff2;
   --text-color: #3c315b; */
   /* ---------------Blue color schema ---------------- */
-  --primary-color: #9fc2f265;
+  --primary-color: #9fc2f24f;
   --extralight-color: #9fc2f2d8;
-  --light-color: #3d3aff;
+  --light-color: #163e96;
   --white-color: #f5f2ff;
   --secondary-color: #82b5f4;
   --text-color: #3c315b;
@@ -317,7 +317,7 @@ nav button {
 /* --------------------------------------Contact page starts-------------------------------------------- */
 #contact {
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--white-color);
 }
 #contact h1 {
   text-align: center;
